@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link href="https://cdn.tailwindcss.com?plugins=typography" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Agregar el enlace al archivo de la biblioteca FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+    .dropdown:focus-within .dropdown-menu {
+      opacity:1;
+      transform: translate(0) scale(1);
+      visibility: visible;
+    }
+        </style>
+        <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+          </style>
+</head>
+<body>        
+    <div class="header-wrap dark:blues w-full">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 gap-4">
+                <div class="header-logo">
+                    <a href="index.html"><img src="img/logo.png"  class="img-fluid light-logo h-7  w-16" alt="logo" /></a>
+                </div>
+                <section class="grid sm:grid-cols-2 theme-color focus:outline-none h-8 w-16">
+                    <button id="laptop-btn" class="justify-center items-center" aria-checked="true">
+                      <!-- svg: https://lucide.dev/icons/laptop-2 -->
+                      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2" />
+                        <path d="M12 20v2" />
+                        <path d="m4.93 4.93 1.41 1.41" />
+                        <path d="m17.66 17.66 1.41 1.41" />
+                        <path d="M2 12h2" />
+                        <path d="M20 12h2" />
+                        <path d="m6.34 17.66-1.41 1.41" />
+                        <path d="m19.07 4.93-1.41 1.41" />
+                      </svg>
+                    </button>
+                    <button id="moon-btn" class="justify-center items-center" aria-checked="false">
+                      <!-- svg: https://lucide.dev/icons/moon -->
+                      <svg class="icon" xmlns="http:btnwww.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon">
+                        <path d="m12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z" />
+                      </svg>
+                    </button>
+                  </section>
+
+                  <div class=" relative inline-block text-left dropdown">
+                    <span class="rounded-md shadow-sm"
+                      ><button class="user-btn inline-flex justify-center w-full px-4 py-2 text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out bg-white border border-gray-300 rounded-md hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800" 
+                       type="button" aria-haspopup="true" aria-expanded="true" aria-controls="headlessui-menu-items-117">
+                        <span>A</span>
+                        <svg class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button
+                    ></span>
+                    <div class="opacity-0 invisible dropdown-menu transition-all duration-300 transform origin-top-right -translate-y-2 scale-95">
+                      <div class="absolute right-0 w-56 mt-2 origin-top-right bg-white border border-gray-200 divide-y divide-gray-100 rounded-md shadow-lg outline-none" aria-labelledby="headlessui-menu-button-1" id="headlessui-menu-items-117" role="menu">
+                        <div class="px-4 py-3">         
+                          <p class="text-sm leading-5">Signed in as</p>
+                          <p class="text-sm font-medium leading-5 text-gray-900 truncate">tom@example.com</p>
+                        </div>
+                        <div class="py-1">
+                          <a href="javascript:void(0)" tabindex="0" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" >Account settings</a>
+                          <a href="javascript:void(0)" tabindex="1" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" >Support</a>
+                          <span role="menuitem" tabindex="-1" class="flex justify-between w-full px-4 py-2 text-sm leading-5 text-left text-gray-700 cursor-not-allowed opacity-50" aria-disabled="true">New feature (soon)</span>
+                          <a href="javascript:void(0)" tabindex="2" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left" role="menuitem" >License</a></div>
+                        <div class="py-1">
+                          <a href="javascript:void(0)" tabindex="3" class="text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left"  role="menuitem" >Sign out</a></div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-wrap grid grid-cols-5 grid-flow-col">
+        <!-- Navegación lateral -->
+  <aside class="bg-gray-800 text-white w-64 min-h-screen p-4">
+    <nav>
+      <ul class="space-y-2">
+        <li class="opcion-con-desplegable">
+          <div class="flex items-center justify-between p-2 hover:bg-gray-700">
+            <div class="flex items-center">
+              <i class="fas fa-layer-group mr-2"></i>
+              <span>RSE Statistics</span>
+            </div>
+            <i class="fas fa-chevron-down text-xs"></i>
+          </div>
+          <ul class="desplegable ml-4 hidden">
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                CSR statistics
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Carbon footprint
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+                <i class="fas fa-chevron-right mr-2 text-xs"></i>
+                Assessment by site/tenant
+              </a>
+            </li>
+          </ul>
+        </li>
+        <!-- Agrega más enlaces para la navegación lateral -->
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="container   col-span-9  mx-auto p-4">
+    <div class="top-wrap">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="...">                            
+                <h6 class="tit text-white-600">Bilan Carbone</h6>
+                <p class="title1">Perimetre Corporate</p>
+            </div>
+            <div class="col-span-2 ...">
+                <div class="oxygen">
+                  <ul class="grid grid-cols-2">
+                    <li><img src="img/others/oxygen-img.png" class="img-fluid" alt="oxygen-img"></li>
+                    <li><h6 class="tit">931 </h6><br><span><p>Emissions Totals Corporate (TCO2E)</p></span></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="impact-section heading">
+        <h3 class="dark:text-white">IMPACT CO2 de par poste d'emission</h3>
+        <div class="dual">
+          <ul class="grid grid-cols-5">
+            <li><a href="#">Exercice annee N Poste</a></li>
+            <li class="col-span-2"><a href="#">Exercice precedent pour comparaison Poste</a></li>
+          </ul>
+        </div>
+        <div class="pie-section">
+          <div class="grid grid-cols-2">
+            <div class="col-md-7">
+               <div class="grid grid-cols-2 gap-5">
+                <div class="col-md-6 mb-5">
+                  <div class="values">
+                  <h5>Immobilisation</h5>
+                  <h4 class="num">35%</h4>
+                  <h6>264<span>Emissions tCO2e</span></h6>
+                </div>
+                </div>
+                <div class="col-md-6 mb-5">
+                  <div class="values">
+                  <h5>Energie</h5>
+                  <h4 class="num1">25%</h4>
+                  <h6>182<span>Emissions tCO2e</span></h6>
+                </div>
+                </div>
+             </div>
+             <div class="grid grid-cols-2 gap-5">
+                <div class="col-md-6 mb-5">
+                  <div class="values">
+                  <h5>Emissions<br> fugitives</h5>
+                  <h4 class="num2">30%</h4>
+                  <h6>394<span>Emissions tCO2e</span></h6>
+                </div>
+                </div>
+                <div class="col-md-6  mb-5">
+                  <div class="values">
+                  <h5>Deplacements <br>domicile-travail</h5>
+                  <h4 class="num3">5%</h4>
+                  <h6>37<span>Emissions tCO2e</span></h6>
+                </div>
+                </div>
+             </div>
+             <div class="grid grid-cols-2 gap-5">
+                <div class="col-md-6  mb-5">
+                  <div class="values">
+                  <h5 class="box">Achats</h5>
+                  <h4 class="num4">4%</h4>
+                  <h6>28<span>Emissions tCO2e</span></h6>
+                </div>
+                </div>
+                <div class="col-md-6  mb-5">
+                  <div class="values">
+                  <h5>Deplacements<br>professionnels </h5>
+                  <h4 class="num5">0%</h4>
+                  <h6>2<span>Emissions tCO2e</span></h6>
+                </div>
+                </div>
+             </div>
+             <div class="grid grid-cols-2 gap-5">
+                <div class="col-md-6  mb-5">
+                  <div class="values">
+                  <h5 class="box">Dechets</h5>
+                  <h4 class="num5">0%</h4>
+                  <h6>16<span>Emissions tCO2e</span></h6>
+                </div>
+                </div>
+                <div class="col-md-6  mb-5">
+                  <div class="values">
+                  <h5>Deplacements<br>visiteurs </h5>
+                  <h4 class="num5">0%</h4>
+                  <h6>1<span>Emissions tCO2e</span></h6>
+                </div>
+                </div>
+             </div>
+          </div>
+          <div class="col-md-5  mx-5">
+            <img src="img/others/pie-chart.png" class="img-fluid" alt="pie-chart-img">
+             <div class="values te">
+                <h5>EMISSIONS TOTALES<br>CORPORATE (TC02E) </h5>
+                <h4 class="num7">931</h4>
+             </div>
+          </div>
+         </div>
+        </div>
+        </div>
+        
+<div class="evolution-section heading">
+<div class="grid grid-cols-2 gap-20">
+<div class="graph-img">
+<h3 class="dark:text-white">Evolution des emissions (tCO2e)</h3>
+<img src="img/others/graph.png" class="img-fluid" alt="graph-img">
+</div>
+<div class="graph-img">
+<h3 class="dark:text-white">Decomposition des emissions par poste (annee N)</h3>
+<img src="img/others/graph-1.png" class="img-fluid" alt="graph-img">
+</div>
+</div>
+</div>
+
+<div class="impact-section heading">
+<h3 class="dark:text-white">EMISSIONS PAR POSTE</h3>
+<div class="pie-section">
+<div class="grid grid-cols-2">
+<div class="col-md-7">
+ <div class="grid grid-cols-2 gap-5">
+  <div class="col-md-6 mb-5">
+    <div class="values">
+    <h5 class="box">Corporate</h5>
+    <h4 class="num">99%</h4>
+    <h6>931</h6>
+  </div>
+  </div>
+  <div class="col-md-6 mb-5">
+    <div class="values">
+    <h5>Consommation<br>energetique</h5>
+    <h4 class="num1">0%</h4>
+    <h6>189</h6>
+  </div>
+  </div>
+</div>
+<div class="grid grid-cols-2 gap-5">
+  <div class="col-md-6 mb-5">
+    <div class="values">
+    <h5>Emissions<br> fugitives</h5>
+    <h4 class="num2">0%</h4>
+    <h6>394<span>Emissions tCO2e</span></h6>
+  </div>
+  </div>
+  <div class="col-md-6 mb-5">
+    <div class="values">
+    <h5 class="box">Dechets</h5>
+    <h4 class="num3">0%</h4>
+    <h6>37</h6>
+  </div>
+  </div>
+</div>
+<div class="grid grid-cols-2 gap-5">
+  <div class="col-md-6 mb-5">
+    <div class="values">
+    <h5 class="box">Deplacements<br>domicile-travail</h5>
+    <h4 class="num5">0%</h4>
+    <h6>28</h6>
+  </div>
+  </div>
+  <div class="col-md-6 mb-5">
+    <div class="values">
+    <h5 class="box">Immobilisations</h5>
+    <h4 class="num5">0%</h4>
+    <h6>2</h6>
+  </div>
+  </div>
+</div>
+<div class="grid grid-cols-2 gap-5">
+  <div class="col-md-6 mb-5">
+    <div class="values">
+    <h5>fret</h5>
+    <h4 class="num4">0%</h4>
+    <h6>16</h6>
+  </div>
+  </div>
+  <div class="col-md-6 mb-5">
+
+  </div>
+</div>
+</div>
+<div class="col-md-5">
+<img src="img/others/pie-chart-1.png" class="img-fluid" alt="pie-chart-1-img">
+</div>
+</div>
+<div class="trip">
+<div class="grid grid-cols-3 gap-5">
+<div class="col-md-4">
+<div class="values tex">
+<h5>EMISSIONS<br>TOTALEZ (TCO2E)</h5>
+<h4 class="num7">1871871</h4>
+</div>
+</div>
+<div class="col-md-4">
+<div class="values tex">
+<h5>EMISSIONS PAR<br>M2 (KGCO2E)</h5>
+<h4 class="num7">2503</h4>
+</div>
+</div>
+<div class="col-md-4">
+<div class="values tex">
+<h5>EMISSIONS PAR<br>ETP (TCO2E)</h5>
+<h4 class="num7">232</h4>
+</div>
+</div>
+</div>
+</div>
+
+<div class="class-section heading mt-5">
+<h3 class="dark:text-white">Classements par site (visualisation top 20) >> volet synthese locataire - plateforme</h3>
+<div class="pie-section">
+<table  class="table-auto border-collapse border border-slate-400 mb-5 ...">
+<thead>
+<tr>
+  <th></th>
+  <th>Surface</th>
+  <th>Consommation elec</th>
+  <th>Consommation gaz</th>
+  <th>Consommation totale</th>
+  <th>Consommation /m2</th>
+  <th>Total des emissions hors fret</th>
+  <th>Intensite carbone (emissions/m2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Site-1</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Site-1</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+<p class="para dark:text-white">Possibilite de trier le tableau par: conso elec, gaz, total des emissions hors fret, intensite carbone</p>
+</div>
+</div>
+<div class="class-section heading">
+<h3 class="dark:text-white">Classements par locataire (visualisation top 20) >> volet synthese locataire - plateforme</h3>
+<div class="pie-section">
+<table class="table-auto border-collapse border border-slate-400 mb-5 ...">
+<thead>
+<tr>
+  <th></th>
+  <th>Nom du batiment</th>
+  <th>Surface occupee</th>
+  <th>Loyer</th>
+  <th>Consommation elec</th>
+  <th>Consommation gaz</th>
+  <th>Consommation totale</th>
+  <th>Emission totale</th>
+  <th>Intensite carbone (emissions/m2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Locataire X</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Locataire Y</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+</tbody>
+</table>
+<p class="para dark:text-white">Possibilite de trier le tableau par: surface, loyer, conso elec, gaz, totale, total des emissions hors fret, intensite</p>
+</div>
+</div>
+</div>
+</div>
+  </main>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <script>
+const moonBtn = document.querySelector("#moon-btn");
+const laptopBtn = document.querySelector("#laptop-btn");
+
+laptopBtn.addEventListener("click", () => {
+  document.body.classList.remove("light", "dark");
+  laptopBtn.setAttribute("aria-checked", "true");
+  moonBtn.setAttribute("aria-checked", "false");
+});
+
+moonBtn.addEventListener("click", () => {
+  document.body.classList.add("dark");
+  moonBtn.setAttribute("aria-checked", "true");
+  laptopBtn.setAttribute("aria-checked", "false");
+});
+
+
+
+    </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Obtener todas las opciones principales con desplegables
+      const opcionesConDesplegable = document.querySelectorAll(".opcion-con-desplegable");
+
+      // Agregar evento de clic a cada opción principal
+      opcionesConDesplegable.forEach(function (opcion) {
+        opcion.addEventListener("click", function () {
+          // Obtener el desplegable asociado a la opción
+          const desplegable = opcion.querySelector(".desplegable");
+
+          // Alternar la clase "hidden" para mostrar u ocultar el desplegable
+          desplegable.classList.toggle("hidden");
+        });
+      });
+    });
+  </script>
+</body>
+</html>
