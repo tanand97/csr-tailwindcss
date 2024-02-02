@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSR Satistics</title>
     <link href="dist/output.css" rel="stylesheet">
     <link href="https://cdn.tailwindcss.com?plugins=typography" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -26,14 +26,14 @@
             }
           </style>
 </head>
-<body>        
+<body class="w-full">        
     <div class="header-wrap dark:blues w-full">
         <div class="container mx-auto">
-            <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-3 gap-4">
+            <div class="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-3 gap-4">
                 <div class="header-logo">
                     <a href="index.html"><img src="img/logo.png"  class="img-fluid light-logo h-7  w-16" alt="logo" /></a>
                 </div>
-                <section class="grid sm:grid-cols-2 theme-color focus:outline-none h-8 w-16">
+                <section class="grid grid-cols-2 sm:grid-cols-2 theme-color focus:outline-none h-8 w-16">
                     <button id="laptop-btn" class="justify-center items-center" aria-checked="true">
                       <!-- svg: https://lucide.dev/icons/laptop-2 -->
                       <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun">
@@ -85,7 +85,7 @@
     </div>
     <div class="bottom-wrap grid grid-cols-5 grid-flow-col">
         <!-- Navegación lateral -->
-  <aside class="bg-gray-800 text-white w-64 min-h-screen p-4">
+  <aside class="bg-gray-800 text-white min-h-screen md:p-4">
     <nav>
       <ul class="space-y-2">
         <li class="opcion-con-desplegable">
@@ -125,7 +125,7 @@
   <!-- Contenido principal -->
   <main class="container   col-span-9  mx-auto p-4">
     <div class="top-wrap">
-        <div class="grid grid-cols-3 gap-4">
+        <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-4">
             <div class="...">                            
                 <h6 class="tit text-white-600">Bilan Carbone</h6>
                 <p class="title1">Perimetre Corporate</p>
@@ -149,9 +149,9 @@
           </ul>
         </div>
         <div class="pie-section">
-          <div class="grid grid-cols-2">
+          <div class="grid md:grid-cols-2">
             <div class="col-md-7">
-               <div class="grid grid-cols-2 gap-5">
+               <div class="grid md:grid-cols-2 gap-5">
                 <div class="col-md-6 mb-5">
                   <div class="values">
                   <h5>Immobilisation</h5>
@@ -167,7 +167,7 @@
                 </div>
                 </div>
              </div>
-             <div class="grid grid-cols-2 gap-5">
+             <div class="grid md:grid-cols-2 gap-5">
                 <div class="col-md-6 mb-5">
                   <div class="values">
                   <h5>Emissions<br> fugitives</h5>
@@ -183,7 +183,7 @@
                 </div>
                 </div>
              </div>
-             <div class="grid grid-cols-2 gap-5">
+             <div class="grid md:grid-cols-2 gap-5">
                 <div class="col-md-6  mb-5">
                   <div class="values">
                   <h5 class="box">Achats</h5>
@@ -199,7 +199,7 @@
                 </div>
                 </div>
              </div>
-             <div class="grid grid-cols-2 gap-5">
+             <div class="grid md:grid-cols-2 gap-5">
                 <div class="col-md-6  mb-5">
                   <div class="values">
                   <h5 class="box">Dechets</h5>
@@ -228,7 +228,7 @@
         </div>
         
 <div class="evolution-section heading">
-<div class="grid grid-cols-2 gap-20">
+<div class="grid md:grid-cols-2 gap-20">
 <div class="graph-img">
 <h3 class="dark:text-white">Evolution des emissions (tCO2e)</h3>
 <img src="img/others/graph.png" class="img-fluid" alt="graph-img">
@@ -243,9 +243,9 @@
 <div class="impact-section heading">
 <h3 class="dark:text-white">EMISSIONS PAR POSTE</h3>
 <div class="pie-section">
-<div class="grid grid-cols-2">
+<div class="grid md:grid-cols-2">
 <div class="col-md-7">
- <div class="grid grid-cols-2 gap-5">
+ <div class="grid md:grid-cols-2 gap-5">
   <div class="col-md-6 mb-5">
     <div class="values">
     <h5 class="box">Corporate</h5>
@@ -261,7 +261,7 @@
   </div>
   </div>
 </div>
-<div class="grid grid-cols-2 gap-5">
+<div class="grid md:grid-cols-2 gap-5">
   <div class="col-md-6 mb-5">
     <div class="values">
     <h5>Emissions<br> fugitives</h5>
@@ -277,7 +277,7 @@
   </div>
   </div>
 </div>
-<div class="grid grid-cols-2 gap-5">
+<div class="grid md:grid-cols-2 gap-5">
   <div class="col-md-6 mb-5">
     <div class="values">
     <h5 class="box">Deplacements<br>domicile-travail</h5>
@@ -293,7 +293,7 @@
   </div>
   </div>
 </div>
-<div class="grid grid-cols-2 gap-5">
+<div class="grid md:grid-cols-2 gap-5">
   <div class="col-md-6 mb-5">
     <div class="values">
     <h5>fret</h5>
@@ -311,7 +311,7 @@
 </div>
 </div>
 <div class="trip">
-<div class="grid grid-cols-3 gap-5">
+<div class="grid md:grid-cols-3 gap-5">
 <div class="col-md-4">
 <div class="values tex">
 <h5>EMISSIONS<br>TOTALEZ (TCO2E)</h5>
@@ -336,7 +336,8 @@
 <div class="class-section heading mt-5">
 <h3 class="dark:text-white">Classements par site (visualisation top 20) >> volet synthese locataire - plateforme</h3>
 <div class="pie-section">
-<table  class="table-auto border-collapse border border-slate-400 mb-5 ...">
+    <div class="block w-full overflow-x-auto ">
+<table  class="table-auto w-full border-collapse border border-slate-400 mb-5 ...">
 <thead>
 <tr>
   <th></th>
@@ -372,13 +373,15 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p class="para dark:text-white">Possibilite de trier le tableau par: conso elec, gaz, total des emissions hors fret, intensite carbone</p>
 </div>
 </div>
 <div class="class-section heading">
 <h3 class="dark:text-white">Classements par locataire (visualisation top 20) >> volet synthese locataire - plateforme</h3>
 <div class="pie-section">
-<table class="table-auto border-collapse border border-slate-400 mb-5 ...">
+    <div class="block w-full overflow-x-auto ">
+<table class="table-auto w-full border-collapse border border-slate-400 mb-5 ...">
 <thead>
 <tr>
   <th></th>
@@ -417,6 +420,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p class="para dark:text-white">Possibilite de trier le tableau par: surface, loyer, conso elec, gaz, totale, total des emissions hors fret, intensite</p>
 </div>
 </div>
