@@ -632,10 +632,6 @@ video {
   margin-left: 0.5rem;
 }
 
-.ml-4 {
-  margin-left: 1rem;
-}
-
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -842,11 +838,6 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
-.bg-gray-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -882,6 +873,10 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
 }
 
 .text-left {
@@ -1006,9 +1001,11 @@ body {
   color: #f1f1f1;
 }
 
-/* .bottom-wrap {
-  background-color: #fff;
-} */
+.bottom-wrap {
+  background-color: #f8f8f8;
+  position: relative;
+  margin-top: 70px;
+}
 
 #sun-btn,
 #moon-btn,
@@ -1065,8 +1062,13 @@ div#headlessui-menu-items-117 {
 
 .header-wrap {
   padding: 15px 20px;
-  /* background-color: #fff;
-    box-shadow: 0px 0px 5px #d6d6d6; */
+  background-color: #fff;
+  box-shadow: 0px 0px 5px #000000;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
 }
 
 .top-wrap {
@@ -1107,15 +1109,16 @@ h6.tit {
   color: #f8f8f8;
 }
 
-.dual ul li {
+.dual ul li a {
   background: linear-gradient(to right, #374484 0%,#42529e 100%);
   margin-right: 20px;
   padding: 10px 20px;
   border-radius: 7px;
-}
-
-.dual ul li a{
   color: #fff;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+  box-shadow: 0px 0px 10px #d6d6d6;
 }
 
 .dual ul li a:hover {
@@ -1130,23 +1133,39 @@ h6.tit {
   padding-top: 15px;
 }
 
-.dual ul li:hover {
+.dual ul li a:hover {
   background: linear-gradient(to right, #a65156 0%,#c56066 100%);
   text-decoration: none !important;
 }
 
+.dark .dual ul li a {
+  box-shadow: none;
+}
+
+.dark .pie-section {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.dark .values {
+  box-shadow: none;
+  border-color: transparent;
+}
+
 .pie-section {
   margin: 30px 0px;
-  /* border: 2px solid #f5f5f5;
-    border-radius: 5px; */
+  background-color: #fff;
+  border: 1px solid #d6d6d6;
+  padding: 10px;
+  box-shadow: 0px 0px 10px #d6d6d6;
 }
 
 .values {
   margin: 5px 0px;
-  border: 1px solid #f5f5f5;
+  border: 1px solid #d6d6d6;
   border-radius: 5px;
   padding: 15px;
-  box-shadow: 0px 3px 6px 0px #dedfe25e;
+  box-shadow: 0px 3px 6px 0px #d6d6d6;
   position: relative;
   background-color: #fff;
   height: 100%;
@@ -1155,6 +1174,7 @@ h6.tit {
 .values h5 {
   font-size: 18px;
   font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
 }
 
 .values h6 {
@@ -1240,6 +1260,7 @@ h4.num7 {
   padding: 20px 14px;
   top: 30px;
   right: 50px !important;
+  font-weight: 700;
 }
 
 .te h5 {
@@ -1321,6 +1342,10 @@ table thead th {
 
 .theme-color {
   margin-left: auto;
+}
+
+.sidebar {
+  background-color: #42529f;
 }
 
 @media screen and (max-width: 1280px) {
@@ -1839,9 +1864,5 @@ table thead th {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .md\:p-4 {
-    padding: 1rem;
   }
 }

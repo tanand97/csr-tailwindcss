@@ -7,6 +7,10 @@
     <link href="dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" integrity="sha512-wnea99uKIC3TJF7v4eKk4Y+lMz2Mklv18+r4na2Gn1abDRPPOeef95xTzdwGD9e6zXJBteMIhZ1+68QC5byJZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -106,7 +110,7 @@
     </div>
     <div class="bottom-wrap dark:bg-gray-800 grid grid-cols-5 grid-flow-col">
         <!-- Navegación lateral -->
-  <aside class="bg-gray-800 text-white min-h-screen md:p-4">
+  <aside class=" text-white sidebar min-h-screen py-2">
     <nav>
       <ul class="space-y-2">
         <li class="opcion-con-desplegable">
@@ -117,21 +121,21 @@
             </div>
             <i class="fas fa-chevron-down text-xs"></i>
           </div>
-          <ul class="desplegable ml-4 hidden">
+          <ul class="desplegable hidden">
             <li>
-              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+              <a href="#" class="block p-2 pl-8 hover:bg-gray-700 flex items-center">
                 <i class="fas fa-chevron-right mr-2 text-xs"></i>
                 CSR statistics
               </a>
             </li>
             <li>
-              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+              <a href="#" class="block p-2 pl-8 hover:bg-gray-700 flex items-center">
                 <i class="fas fa-chevron-right mr-2 text-xs"></i>
                 Carbon footprint
               </a>
             </li>
             <li>
-              <a href="#" class="block p-2 hover:bg-gray-700 flex items-center">
+              <a href="#" class="block p-2 pl-8 hover:bg-gray-700 flex items-center">
                 <i class="fas fa-chevron-right mr-2 text-xs"></i>
                 Assessment by site/tenant
               </a>
@@ -169,7 +173,7 @@
             <li class="col-span-2"><a href="#">Exercice precedent pour comparaison Poste</a></li>
           </ul>
         </div>
-        <div class="pie-section">
+        <div class="pie-section dark:bg-gray-800">
           <div class="grid md:grid-cols-2">
             <div class="col-md-7">
                <div class="grid md:grid-cols-2 gap-5">
@@ -263,7 +267,7 @@
 
 <div class="impact-section heading">
 <h3 class="dark:text-white">EMISSIONS PAR POSTE</h3>
-<div class="pie-section">
+<div class="pie-section  dark:bg-gray-800">
 <div class="grid md:grid-cols-2">
 <div class="col-md-7">
  <div class="grid md:grid-cols-2 gap-5">
@@ -353,10 +357,10 @@
 </div>
 </div>
 </div>
-
+</div>
 <div class="class-section heading mt-5">
 <h3 class="dark:text-white">Classements par site (visualisation top 20) >> volet synthese locataire - plateforme</h3>
-<div class="pie-section">
+<div class="pie-section dark:bg-gray-800">
     <div class="block w-full overflow-x-auto ">
 <table  class="table-auto w-full border-collapse border border-slate-400 mb-5 ...">
 <thead>
@@ -400,7 +404,7 @@
 </div>
 <div class="class-section heading">
 <h3 class="dark:text-white">Classements par locataire (visualisation top 20) >> volet synthese locataire - plateforme</h3>
-<div class="pie-section">
+<div class="pie-section dark:bg-gray-800">
     <div class="block w-full overflow-x-auto ">
 <table class="table-auto w-full border-collapse border border-slate-400 mb-5 ...">
 <thead>
@@ -476,16 +480,16 @@
                 localStorage.theme = 'dark'
                 this.mode = 'dark'
             },
-            system() {
-                if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                    document.documentElement.classList.add('dark')
-                }
-                else {
-                    document.documentElement.classList.remove('dark')
-                }
-                localStorage.theme = 'system'
-                this.mode = 'system'
-            },
+            // system() {
+            //     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            //         document.documentElement.classList.add('dark')
+            //     }
+            //     else {
+            //         document.documentElement.classList.remove('dark')
+            //     }
+            //     localStorage.theme = 'system'
+            //     this.mode = 'system'
+            // },
             light() {
                 document.documentElement.classList.remove('dark')
                 localStorage.theme = 'light'
