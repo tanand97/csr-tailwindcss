@@ -322,6 +322,16 @@ table thead th {
 .sidebar {
   background-color: #42529f;
 }
+.logout a {
+  display: flex;
+  gap: 10px;
+}
+.logout {
+  position: fixed;
+  z-index: 99;
+  bottom: 10%;
+  left: 40px;
+}
 
 
 @media screen and (max-width: 1280px) {
@@ -420,10 +430,7 @@ h6.tit {
   padding-top: 0px;
 }
 .dual ul li a {
-  font-size: 14px;
-}
-.dual ul li {
-  padding: 7px 11px;
+  font-size: 12px;
 }
 .col-md-6 {
   padding-right: 5px;
@@ -557,7 +564,6 @@ h6.tit {
 }
 .sidebar ul ul li {
   display: inline-flex;
-  padding: 5px 0px;
 }
 
 .sidebar ul li.active, .sidebar ul li:hover {
@@ -571,6 +577,7 @@ h6.tit {
   text-align: left;
   padding-left: 12px;
   text-decoration: none;
+  white-space: normal;
 }
 .dual ul {
   display: block !important;
@@ -625,9 +632,7 @@ h6.tit {
   display: none;
   margin-left: 45px;
 }
-.sidebar .sub-menu li {
-  //padding: 10px;
-}
+
 .main {
   position: relative;
   display: block;

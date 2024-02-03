@@ -1352,6 +1352,18 @@ table thead th {
   background-color: #42529f;
 }
 
+.logout a {
+  display: flex;
+  gap: 10px;
+}
+
+.logout {
+  position: fixed;
+  z-index: 99;
+  bottom: 10%;
+  left: 40px;
+}
+
 @media screen and (max-width: 1280px) {
   .values h5 {
     font-size: 16px;
@@ -1469,11 +1481,7 @@ table thead th {
   }
 
   .dual ul li a {
-    font-size: 14px;
-  }
-
-  .dual ul li {
-    padding: 7px 11px;
+    font-size: 12px;
   }
 
   .col-md-6 {
@@ -1619,7 +1627,6 @@ table thead th {
 
   .sidebar ul ul li {
     display: inline-flex;
-    padding: 5px 0px;
   }
 
   .sidebar ul li.active, .sidebar ul li:hover {
@@ -1634,6 +1641,7 @@ table thead th {
     text-align: left;
     padding-left: 12px;
     text-decoration: none;
+    white-space: normal;
   }
 
   .dual ul {
@@ -1701,10 +1709,6 @@ table thead th {
   .sidebar ul.sub-menu {
     display: none;
     margin-left: 45px;
-  }
-
-  .sidebar .sub-menu li {
-    //padding: 10px;
   }
 
   .main {
