@@ -24,9 +24,9 @@ body {
 .dark .icon {
   color: #f1f1f1;
 }
-.bottom-wrap {
+/* .bottom-wrap {
   background-color: #fff;
-}
+} */
 
 #sun-btn,
 #moon-btn,
@@ -75,8 +75,8 @@ div#headlessui-menu-items-117 {
 }
 .header-wrap {
     padding: 15px 20px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px #d6d6d6;
+    /* background-color: #fff;
+    box-shadow: 0px 0px 5px #d6d6d6; */
 }
 .top-wrap {
     padding: 20px 50px;
