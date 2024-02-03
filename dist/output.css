@@ -616,6 +616,11 @@ video {
   margin-right: auto;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .-mr-1 {
   margin-right: -0.25rem;
 }
@@ -1152,6 +1157,10 @@ h6.tit {
   border-color: transparent;
 }
 
+.sidebar ul li a:hover {
+  color: #2a3465;
+}
+
 .pie-section {
   margin: 30px 0px;
   background-color: #fff;
@@ -1531,6 +1540,23 @@ table thead th {
     font-size: 7px;
   }
 
+  .header-wrap {
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #000000;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 9;
+  }
+
+  .bottom-wrap {
+    background-color: #f8f8f8;
+    position: relative;
+    margin-top: 0px;
+  }
+
   #menu-action {
     display: inline-block;
     float: left;
@@ -1570,13 +1596,6 @@ table thead th {
   }
 
   .sidebar {
-    position: fixed;
-    z-index: 9999999;
-    left: 0;
-    top: 97px;
-    height: 100%;
-    width: 53px;
-    padding: 0px;
     overflow: auto;
   }
 
@@ -1680,7 +1699,8 @@ table thead th {
   }
 
   .sidebar ul li a i {
-    margin-left: 10px;
+    margin-left: 0px;
+    margin-right: 4px !important;
   }
 
   .sidebar ul.sub-menu {
@@ -1759,6 +1779,11 @@ table thead th {
 
   .top-wrap {
     padding: 20px 20px !important;
+  }
+
+  .values {
+    margin: 0px;
+    height: auto;
   }
 }
 
