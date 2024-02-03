@@ -145,6 +145,7 @@ h6.tit {
 .dark .pie-section {
   box-shadow: none;
   border-color: transparent;
+  padding: 0px;
 }
 .dark .values {
   box-shadow: none;
